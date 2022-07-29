@@ -64,12 +64,16 @@ function colors(color) {
   switch(color) {
     case "blue":
       return "This is blue";
+      break;
     case "red": 
       return "This is red";
+      break;
     case "green":
       return "This is green";
+      break;
     case "orange":
       return "This is orange";
+      break;
     default: 
     return "Color not found";
   }
@@ -154,7 +158,7 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  if (numero<2) return false;
+  if (numero==0 || numero==1 || numero==-1) return false;
   if (numero===2) return true;
   for (var i=2; i<numero; i++) {
     if (numero%i===0) {
@@ -202,7 +206,7 @@ function doWhile(numero) {
   //Usar el bucle do ... while.
   var i = 0;
   do { 
-    i=i+1;
+    i+=1;
     numero = numero + 5;
     } 
   while (i<8);
