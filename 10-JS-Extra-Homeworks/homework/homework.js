@@ -10,11 +10,11 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
-  newArray = [];
+  nuevoarray = [];
   for (var key in objeto) {
-    newArray.push([key,objeto[key]]);
+    nuevoarray.push([key,objeto[key]]);
     }
-  return newArray;  
+  return nuevoarray;  
 }
 
 
@@ -23,15 +23,16 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
-  newObjeto = {};
-  for (let i=0; i<string.length; i++) {
-    if (!newObjeto[string[i]]) {
-      newObjeto[string[i]] = 1;
+var palabra = {};
+var conta = 0
+for(var i = 0; i<string.length; i++) {
+  if(!palabra[string[i]]) {
+    palabra[string[i]] = conta + 1;
     } else {
-      newObjeto[string[i]] = newObjeto[string[i]] + 1;
+    palabra[string[i]] = palabra[string[i]] +1
     } 
-   }
-  return newObjeto;  
+  }
+return palabra;  
 }
 
 
@@ -41,15 +42,15 @@ function capToFront(s) {
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
   var mayus = "";
-  var minus = "";
-  for (var i = 0; i<s.length; i++) {
-    if (s[i] === s[i].toUpperCase()) {
-      mayus = mayus + s[i];
+  var minus = "" ;
+  for(var i=0; i<s.length; i++)  {
+    if (s.charAt(i)===s.charAt(i).toUpperCase()) {
+      mayus = mayus + s.charAt(i);
     } else {
-      minus = minus + s[i];
-    }
+      minus = minus + s.charAt(i);
+    }   
   }
-  return mayus + minus;    
+ return mayus + minus;  
 }
 
 
@@ -59,10 +60,8 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
-var espejo = str.split(" ").map(function(elemento){
-  return elemento.split("").reverse().join("")
-  });
-return espejo.join(" ");
+  var reverso = str.split(" ").map(elemento  => elemento.split("").reverse().join(""));
+  return reverso.join(" ");
 }
 
 
@@ -71,12 +70,10 @@ function capicua(numero) {
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
-  var string = numero.toString();
-if (string===string.split("").reverse().join("")) {
-  return "Es capicua";
-  } else {
-   return "No es capicua";
-  }  
+  if (numero.toString()===numero.toString().split("").reverse().join("")) {
+    return  "Es capicua";
+    }
+  return "No es capicua";
 }
 
 
@@ -84,13 +81,8 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
-var borra = "";
-for (var i = 0; i<cadena.length; i++) {
-  if (cadena[i]!== "a" && cadena[i]!== "b" && cadena[i]!== "c") {
-     borra = borra + cadena[i];
-   }
- }
- return borra;
+var eliminar = cadena.split("").filter(elemento=>elemento!=="a" && elemento!=="b" && elemento!=="c");
+return eliminar.join("");
 }
 
 
