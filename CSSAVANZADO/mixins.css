@@ -1,0 +1,29 @@
+ /* PARA OPTIMIZAR NUESTRO CODIGO USAMOS MIXINS, para definir un mixin se debe
+ colocar un punto por delante ".", y luego pasarle los parametros */
+
+ .flex(@direction:column, @justify, @align) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+ }
+
+ /* si no me definis el radius, se pone 20 px por defecto */
+ 
+ .roundImg(@radius:20px) { 
+   border-radius: @radius;
+ }
+
+ .btn(@color, @background, @border){
+   font-size:20px;
+   font-weight:300;
+
+   background-color: @background;
+   color: @color;
+   border-radius:@border;
+   border: 1px solid black;
+   display: inline-block;
+
+   padding: 10px;
+   curson: pointer;
+ }

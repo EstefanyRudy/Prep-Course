@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  <style>
+    :root{
+      --whale: black;
+      }
+    h1 {
+      color:rebeccapurple;
+      font-size: 50px;
+      font-family: "Open Sans",Lobster;
+    }
+    .pink-color {
+      color: pink !important;
+      --whale: gray;
+    }
+    .blue-text {
+      color:rgb(0,0,255);
+    }
+    .larger-image {
+      width: 1000px;
+    }
+    .thin-brown-border {
+      border-color:brown;
+      border-style:solid;
+      border-width:10px;
+      border-radius: 15%;
+      padding: 50px 0px 0px 50px;
+      margin: 50px 100px 50px 100px;
+    }
+    .black-background {
+      background-color: aqua;
+      background-color:var(--whale,brown);
+    }
+    #background {
+      background-color: pink;
+    }
+    [type="radio"] {
+    margin: 50px 0px 50px 0px;
+    }
+    p {
+      font-size: 25px;
+    }
+    body {
+      background-color: rgb(211, 211, 148);
+    }
+    #orangetext {
+      color: orange;
+    }
+  </style>  
+  <head>
+    <title> MY PLAYLIST </title>
+  </head>
+  <!--What´s up budy-->
+  <body>
+    <h1 class="pink-color black-background"> MY PLAYLIST </h1>
+    <p id="background"> Los párrafos son unidades semánticas 
+      estructurales del texto que pueden estar 
+      constituidas por una oración o por una 
+      serie de oraciones, y suponen un bloque 
+      temático unitario y homogéneo.
+      Pagina de Facebook de <a href="https://www.facebook.com/soyhenryok" target="_blank">Soy Henrry</a>
+      para que los puedas seguir
+    </p>
+    <a href="https://www.viviendoencasa.mx/mascotas/como-hacer-ropa-para-perros-con-prendas-viejas/" target="_blank">
+      <img class="larger-image thin-brown-border" src="https://i2.wp.com/www.viviendoencasa.mx/wp-content/uploads/2021/08/Co%CC%81mo-hacer-ropa-para-perros_-4-ideas-con-prendas-viejas-1.jpg?resize=1280%2C720&ssl=1" alt="dos perritos lindos con más estilo que tú">
+    </a>
+    <p class="blue-text"> Mis mascotas</p>
+    <ul>
+     <li>Chapulin</li>
+     <li>Arenita</li>
+     <li>Ginger</li>
+     <li>Valentina</li>
+    </ul>
+    <p> Mis cantantes favoritos</p>
+    <ol>
+      <li>Brock Ansiolitiko</li>
+      <li>Adele</li>
+      <li>James Arthur</li>
+      <li>Calum Sccott</li>
+     </ol>
+     <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+     <input type="text" placeholder="What is up dude" required>
+     <button type="submit">OKIS</button>
+     <p>¿Cúal es tu cancion favorita</p>
+     <label for="favorite song">
+      <input id="favorite song" value="Lose yourself" type="radio" name="song">Lose yourself
+     </label>
+     <label for="favorite song">
+      <input id="favorite song" value="Dancing on my Own" type="radio" name="song" checked>Dancing on my Own
+     </label>
+     <label for="favorite song">
+      <input id="favorite song" value="Si me muero" type="radio" name="song">Si me muero
+     </label>
+     <p>¿Qué genero musical te gusta?</p>
+     <label for="ritmo">
+      <input id="ritmo" value="balada" type="checkbox" name="Genero musical">balada
+     </label>
+     <label for="ritmo">
+      <input id="ritmo" value="salsa" type="checkbox" name="Genero musical">salsa
+     </label>
+     <label for="ritmo">
+      <input id="ritmo" value="rock"type="checkbox" name="Genero musical" checked>rock
+     </label>
+     </form>
+     <input type="text" id="input">
+     <button id = "add">AGREGAR MASCOTA</button>
+     <script type = "text/javascript" src="ejemplo.js" async></script>
+    </body>    
+</html>   
